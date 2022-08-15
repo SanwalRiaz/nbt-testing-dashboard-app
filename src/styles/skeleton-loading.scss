@@ -1,0 +1,45 @@
+.skeleton-item {
+  height: 16px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 12px;
+
+  animation: skeleton-loading 1.4s ease infinite;
+  background: linear-gradient(
+    90deg,
+    hsla(0, 0%, 74.5%, 0.2) 25%,
+    hsla(0, 0%, 50.6%, 0.24) 37%,
+    hsla(0, 0%, 74.5%, 0.2) 63%
+  );
+  background-size: 400% 100%;
+
+  &.size-1 {
+    width: 30%;
+  }
+
+  &.size-2 {
+    width: 40%;
+  }
+
+  &.size-3 {
+    width: 50%;
+  }
+
+  &.size-4 {
+    width: 65%;
+  }
+
+  &.size-5 {
+    width: 85%;
+  }
+}
+
+@-webkit-keyframes skeleton-loading {
+  0% {
+    background-position: 100% 50%;
+  }
+
+  to {
+    background-position: 0 50%;
+  }
+}
