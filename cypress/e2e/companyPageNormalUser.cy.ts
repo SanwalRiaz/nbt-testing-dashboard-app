@@ -59,7 +59,7 @@ describe('Company Page', () => {
 
   it('Checks Company Users list is available', () => {
     cy.get('.me-auto > [href="/company"]').click();
-    cy.get('li').eq(-4).click();
+    cy.get('li').first().click();
     cy.get('table > tbody > tr > td:nth-child(2)')
       .should('have.length.gt', 1)
       .its('length')

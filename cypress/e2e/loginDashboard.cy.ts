@@ -17,7 +17,7 @@ describe('The Login Page', () => {
     cy.get('#root').should('contain', 'Invalid email or password')
   })
 
-  it('Login with incorrect Username and incorrect Password as a Normal User unsuccessfully', function () {
+  it('Login with incorrect Username and incorrect Password unsuccessfully', function () {
     cy.visit('/')
     cy.get('#formBasicEmail').type('testing123@test.com')
     cy.get('#formBasicPassword').type(`testing`)
@@ -25,7 +25,7 @@ describe('The Login Page', () => {
     cy.get('#root').should('contain', 'Invalid email or password')
   })
 
-  it('Login with empty Username and empty Password', function () {
+  it('Login with empty Username and empty Password unsuccessfully', function () {
     cy.visit('/')
     cy.get('#formBasicEmail').clear()
     cy.get('#formBasicPassword').clear()
