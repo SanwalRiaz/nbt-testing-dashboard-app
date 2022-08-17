@@ -1,7 +1,9 @@
 describe('Company Page', () => {
+
   beforeEach(() => {
     cy.restoreLocalStorage();
   });
+
   it('Lists companies', () => {
     cy.visit('/');
     cy.get('#formBasicEmail').type('user@test.com');
